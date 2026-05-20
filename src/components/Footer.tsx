@@ -209,15 +209,27 @@ export default function Footer() {
         className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left"
         style={{ borderTop: "0.5px solid var(--border)" }}
       >
-        <p
-          style={{
-            fontFamily: "var(--font-dm-sans)",
-            fontSize: "12px",
-            color: "var(--text-muted)",
-          }}
-        >
-          &copy; {year} BN &amp; Co Construction. All rights reserved.
-        </p>
+        <div>
+          <p
+            style={{
+              fontFamily: "var(--font-dm-sans)",
+              fontSize: "12px",
+              color: "var(--text-muted)",
+            }}
+          >
+            &copy; {year} BN &amp; Co Construction. All rights reserved.
+          </p>
+          <p
+            className="mt-1"
+            style={{
+              fontFamily: "var(--font-dm-sans)",
+              fontSize: "12px",
+              color: "var(--text-muted)",
+            }}
+          >
+            ABN 90 642 488 195
+          </p>
+        </div>
         <span
           className="px-3 py-1"
           style={{
