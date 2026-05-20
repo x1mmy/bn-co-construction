@@ -3,7 +3,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
-import { projects } from "@/lib/projects";
+import { allProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Projects | BN & Co Construction",
@@ -58,9 +58,9 @@ export default function ProjectsPage() {
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px"
               style={{ backgroundColor: "var(--border)" }}
             >
-              {projects.map((project, i) => (
+              {allProjects.map((project, i) => (
                 <ProjectCard
-                  key={project.name}
+                  key={`${project.name}-${project.img}`}
                   project={{ ...project, size: "standard" }}
                   index={i}
                   variant="grid"

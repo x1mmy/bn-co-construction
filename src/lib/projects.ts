@@ -5,35 +5,89 @@ export type Project = {
   img: string;
 };
 
-export const projects: Project[] = [
+export const featuredProjects: Project[] = [
   {
     size: "large",
     type: "New Build",
-    name: "Roseville Chase Residence",
-    img: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80",
+    name: "Roseville Chase — New Build",
+    img: "/projects/roseville-chase-new-build.png",
   },
   {
     size: "standard",
-    type: "Kitchen Renovation",
-    name: "Kincumber Kitchen",
-    img: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+    type: "New Build & Extension",
+    name: "Kincumber — New Build and Home Extension",
+    img: "/projects/kincumber-new-build-home-extension.png",
   },
   {
     size: "standard",
-    type: "Bathroom Remodel",
-    name: "North Shore Master Bath",
-    img: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80",
+    type: "Bathroom Remodelling",
+    name: "Sydney — Bathroom Remodelling",
+    img: "/projects/sydney-bathroom-remodelling.png",
   },
   {
     size: "standard",
-    type: "Home Extension",
-    name: "Lane Cove Extension",
-    img: "https://images.unsplash.com/photo-1600573472556-e636c2acda88?w=800&q=80",
+    type: "House Renovation",
+    name: "Lindfield — House Renovation",
+    img: "/projects/lindfield-house-renovation.png",
   },
   {
     size: "standard",
     type: "Custom Carpentry",
-    name: "Mosman Staircase",
-    img: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+    name: "Bondi — Stairs",
+    img: "/projects/bondi-stairs.png",
   },
 ];
+
+export const allProjects: Project[] = [
+  ...featuredProjects.map((p) => ({ ...p, size: "standard" as const })),
+  {
+    size: "standard",
+    type: "New Build & Extension",
+    name: "Kincumber — New Build and Home Extension",
+    img: "/projects/kincumber-new-build-home-extension-2.png",
+  },
+  {
+    size: "standard",
+    type: "Granny Flat",
+    name: "Kincumber — New Build and Home Extension",
+    img: "/projects/kincumber-granny-flat.png",
+  },
+  {
+    size: "standard",
+    type: "Bathroom Renovation",
+    name: "Sydney — Bathroom Renovation",
+    img: "/projects/sydney-bathroom-renovation.png",
+  },
+  {
+    size: "standard",
+    type: "Bathroom Renovation",
+    name: "Sydney — Bathroom Renovation",
+    img: "/projects/sydney-bathroom-renovation-2.png",
+  },
+  {
+    size: "standard",
+    type: "Complete Home Remodelling",
+    name: "Sydney — Complete Home Remodelling",
+    img: "/projects/sydney-complete-home-remodelling.png",
+  },
+  {
+    size: "standard",
+    type: "Landscaping & Outdoor Carpentry",
+    name: "Sydney — Landscaping and Outdoor Carpentry",
+    img: "/projects/sydney-landscaping-outdoor-carpentry.png",
+  },
+  {
+    size: "standard",
+    type: "Kitchen & Living",
+    name: "bnc2",
+    img: "/projects/bnc2.png",
+  },
+  {
+    size: "standard",
+    type: "Entry & Interior",
+    name: "bnc3",
+    img: "/projects/bnc3.png",
+  },
+];
+
+export const projects = featuredProjects;

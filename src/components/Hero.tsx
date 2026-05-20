@@ -8,8 +8,8 @@ export default function Hero() {
     <section className="relative min-h-[100dvh] flex items-end">
       <div className="absolute inset-0 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80"
-          alt="BN & Co Construction — residential build in Sydney"
+          src="/bnc1.png"
+          alt="Roseville Chase new build by BN & Co Construction"
           fill
           priority
           sizes="100vw"

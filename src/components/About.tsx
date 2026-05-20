@@ -36,7 +36,7 @@ export default function About() {
           >
             <div className="relative overflow-hidden aspect-video md:aspect-[4/5]">
               <Image
-                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80"
+                src="/projects/roseville-chase-new-build.png"
                 alt="Roseville Chase new build by BN & Co Construction"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

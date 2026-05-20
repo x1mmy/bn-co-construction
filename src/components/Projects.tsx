@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
-import { projects } from "@/lib/projects";
+import { featuredProjects } from "@/lib/projects";
 
 export default function Projects() {
   return (
@@ -57,7 +57,7 @@ export default function Projects() {
           className="grid grid-cols-1 md:grid-cols-3 gap-px mb-10"
           style={{ backgroundColor: "var(--border)" }}
         >
-          {projects.map((p, i) => (
+          {featuredProjects.map((p, i) => (
             <ProjectCard key={p.name} project={p} index={i} variant="featured" />
           ))}
         </div>
