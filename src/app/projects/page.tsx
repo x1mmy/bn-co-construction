@@ -10,9 +10,10 @@ import {
 } from "@/lib/portfolio";
 
 export const metadata: Metadata = {
-  title: "Projects | BN & Co Construction",
+  title: "Projects",
   description:
     "Featured new builds and renovations including The Roseville Residence and The Kincumber Residence, plus additional carpentry and remodelling work across Sydney.",
+  alternates: { canonical: "/projects" },
 };
 
 export default function ProjectsPage() {

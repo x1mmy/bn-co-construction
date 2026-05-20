@@ -1,14 +1,16 @@
+import dynamic from "next/dynamic";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
-import About from "@/components/About";
 import Services from "@/components/Services";
-import Projects from "@/components/Projects";
-import Process from "@/components/Process";
-import Testimonials from "@/components/Testimonials";
 import CallBlakeCta from "@/components/CallBlakeCta";
-import QuoteForm from "@/components/QuoteForm";
 import Footer from "@/components/Footer";
+
+const About = dynamic(() => import("@/components/About"));
+const Projects = dynamic(() => import("@/components/Projects"));
+const Process = dynamic(() => import("@/components/Process"));
+const Testimonials = dynamic(() => import("@/components/Testimonials"));
+const QuoteForm = dynamic(() => import("@/components/QuoteForm"));
 
 export default function Home() {
   return (

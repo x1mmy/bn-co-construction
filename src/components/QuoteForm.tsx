@@ -227,22 +227,30 @@ export default function QuoteForm({
                 {/* Row 1: names */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label style={labelStyle}>First Name *</label>
+                    <label htmlFor="firstName" style={labelStyle}>
+                      First Name *
+                    </label>
                     <input
                       {...register("firstName", { required: "Required" })}
+                      id="firstName"
                       style={inputStyle}
                       placeholder="Your first name"
+                      autoComplete="given-name"
                     />
                     {errors.firstName && (
                       <p style={errorStyle}>{errors.firstName.message}</p>
                     )}
                   </div>
                   <div>
-                    <label style={labelStyle}>Last Name</label>
+                    <label htmlFor="lastName" style={labelStyle}>
+                      Last Name
+                    </label>
                     <input
                       {...register("lastName")}
+                      id="lastName"
                       style={inputStyle}
                       placeholder="Your last name"
+                      autoComplete="family-name"
                     />
                   </div>
                 </div>
@@ -250,27 +258,35 @@ export default function QuoteForm({
                 {/* Row 2: contact */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label style={labelStyle}>Phone Number *</label>
+                    <label htmlFor="phone" style={labelStyle}>
+                      Phone Number *
+                    </label>
                     <input
                       {...register("phone", { required: "Required" })}
+                      id="phone"
                       style={inputStyle}
                       placeholder="04XX XXX XXX"
                       type="tel"
+                      autoComplete="tel"
                     />
                     {errors.phone && (
                       <p style={errorStyle}>{errors.phone.message}</p>
                     )}
                   </div>
                   <div>
-                    <label style={labelStyle}>Email Address *</label>
+                    <label htmlFor="email" style={labelStyle}>
+                      Email Address *
+                    </label>
                     <input
                       {...register("email", {
                         required: "Required",
                         pattern: { value: /\S+@\S+\.\S+/, message: "Invalid email" },
                       })}
+                      id="email"
                       style={inputStyle}
                       placeholder="you@email.com"
                       type="email"
+                      autoComplete="email"
                     />
                     {errors.email && (
                       <p style={errorStyle}>{errors.email.message}</p>
@@ -278,20 +294,32 @@ export default function QuoteForm({
                   </div>
                 </div>
 
-                {/* Row 3: project type */}
+                {/* Row 3: project type — label wraps select for explicit association */}
                 <div className="mb-4">
-                  <label style={labelStyle}>Project Type *</label>
-                  <select
-                    {...register("projectType", { required: "Required" })}
-                    style={{ ...inputStyle, cursor: "pointer" }}
+                  <label
+                    htmlFor="projectType"
+                    style={{ ...labelStyle, cursor: "pointer" }}
                   >
-                    <option value="">Select a project type</option>
-                    {projectTypes.map((pt) => (
-                      <option key={pt} value={pt}>
-                        {pt}
-                      </option>
-                    ))}
-                  </select>
+                    Project Type *
+                    <select
+                      {...register("projectType", { required: "Required" })}
+                      id="projectType"
+                      required
+                      style={{
+                        ...inputStyle,
+                        cursor: "pointer",
+                        display: "block",
+                        marginTop: "8px",
+                      }}
+                    >
+                      <option value="">Select a project type</option>
+                      {projectTypes.map((pt) => (
+                        <option key={pt} value={pt}>
+                          {pt}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
                   {errors.projectType && (
                     <p style={errorStyle}>{errors.projectType.message}</p>
                   )}
@@ -299,19 +327,26 @@ export default function QuoteForm({
 
                 {/* Row 4: suburb */}
                 <div className="mb-4">
-                  <label style={labelStyle}>Project Suburb</label>
+                  <label htmlFor="suburb" style={labelStyle}>
+                    Project Suburb
+                  </label>
                   <input
                     {...register("suburb")}
+                    id="suburb"
                     style={inputStyle}
                     placeholder="e.g. Roseville"
+                    autoComplete="address-level2"
                   />
                 </div>
 
                 {/* Row 5: message */}
                 <div className="mb-6">
-                  <label style={labelStyle}>Tell us about your project</label>
+                  <label htmlFor="message" style={labelStyle}>
+                    Tell us about your project
+                  </label>
                   <textarea
                     {...register("message")}
+                    id="message"
                     rows={4}
                     style={{ ...inputStyle, resize: "vertical" }}
                     placeholder="Describe your project, timeline, or any questions..."

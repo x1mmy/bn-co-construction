@@ -4,9 +4,10 @@ import Footer from "@/components/Footer";
 import QuoteForm from "@/components/QuoteForm";
 
 export const metadata: Metadata = {
-  title: "Contact | BN & Co Construction",
+  title: "Contact",
   description:
     "Request a free quote from BN & Co Construction. Licensed Sydney builder — response within 24 hours, detailed quote within 48 hours.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

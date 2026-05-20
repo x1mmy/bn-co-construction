@@ -59,7 +59,6 @@ export default function Footer() {
                 color: "var(--text-muted)",
                 fontFamily: "var(--font-dm-sans)",
               }}
-              aria-label="Follow BN & Co Construction on Instagram"
             >
               <svg
                 width="16"
