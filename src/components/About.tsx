@@ -36,8 +36,8 @@ export default function About() {
           >
             <div className="relative overflow-hidden aspect-video md:aspect-[4/5]">
               <Image
-                src="/projects/roseville-chase-new-build.png"
-                alt="Roseville Chase new build by BN & Co Construction"
+                src="/projects/roseville/01.png"
+                alt="The Roseville Residence by BN & Co Construction"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
@@ -58,7 +58,7 @@ export default function About() {
                     letterSpacing: "0.12em",
                   }}
                 >
-                  Roseville Chase — New Build 2024
+                  The Roseville Residence — New Build 2024
                 </span>
               </div>
             </div>

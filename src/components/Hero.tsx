@@ -84,7 +84,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
             <a
-              href="#quote"
+              href="/contact"
               className="w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-medium text-center transition-all duration-200 active:scale-[0.98]"
               style={{
                 backgroundColor: "var(--gold)",

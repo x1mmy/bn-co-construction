@@ -26,6 +26,7 @@ export default function Footer() {
               Construction
             </p>
             <p
+              className="mb-8"
               style={{
                 fontFamily: "var(--font-dm-sans)",
                 fontSize: "13px",
@@ -38,6 +39,46 @@ export default function Footer() {
               <br />
               Proudly serving Sydney since 2014.
             </p>
+            <p
+              className="uppercase mb-4"
+              style={{
+                fontFamily: "var(--font-dm-sans)",
+                fontSize: "11px",
+                letterSpacing: "0.12em",
+                color: "var(--text-muted)",
+              }}
+            >
+              Social
+            </p>
+            <a
+              href="https://www.instagram.com/bn_co_construction/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 text-[13px] font-light transition-colors hover:text-[var(--gold)]"
+              style={{
+                color: "var(--text-muted)",
+                fontFamily: "var(--font-dm-sans)",
+              }}
+              aria-label="Follow BN & Co Construction on Instagram"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="opacity-60 shrink-0"
+                aria-hidden
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+              @bn_co_construction
+            </a>
           </div>
 
           <div>
@@ -55,9 +96,9 @@ export default function Footer() {
             <nav className="flex flex-col gap-3">
               {[
                 { label: "About", href: "/#about" },
-                { label: "Services", href: "/#services" },
-                { label: "Projects", href: "/#projects" },
-                { label: "Get a Quote", href: "/#quote" },
+                { label: "Services", href: "/services" },
+                { label: "Portfolio", href: "/projects" },
+                { label: "Contact", href: "/contact" },
               ].map((l) => (
                 <Link
                   key={l.href}

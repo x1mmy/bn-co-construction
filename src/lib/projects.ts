@@ -5,18 +5,19 @@ export type Project = {
   img: string;
 };
 
+/** Homepage projects preview — links to full portfolio */
 export const featuredProjects: Project[] = [
   {
     size: "large",
     type: "New Build",
-    name: "Roseville Chase — New Build",
-    img: "/projects/roseville-chase-new-build.png",
+    name: "The Roseville Residence",
+    img: "/projects/roseville/02.png",
   },
   {
     size: "standard",
-    type: "New Build & Extension",
-    name: "Kincumber — New Build and Home Extension",
-    img: "/projects/kincumber-new-build-home-extension.png",
+    type: "Granny Flat",
+    name: "The Kincumber Residence",
+    img: "/projects/kincumber/01.png",
   },
   {
     size: "standard",
@@ -35,58 +36,6 @@ export const featuredProjects: Project[] = [
     type: "Custom Carpentry",
     name: "Bondi — Stairs",
     img: "/projects/bondi-stairs.png",
-  },
-];
-
-export const allProjects: Project[] = [
-  ...featuredProjects.map((p) => ({ ...p, size: "standard" as const })),
-  {
-    size: "standard",
-    type: "New Build & Extension",
-    name: "Kincumber — New Build and Home Extension",
-    img: "/projects/kincumber-new-build-home-extension-2.png",
-  },
-  {
-    size: "standard",
-    type: "Granny Flat",
-    name: "Kincumber — New Build and Home Extension",
-    img: "/projects/kincumber-granny-flat.png",
-  },
-  {
-    size: "standard",
-    type: "Bathroom Renovation",
-    name: "Sydney — Bathroom Renovation",
-    img: "/projects/sydney-bathroom-renovation.png",
-  },
-  {
-    size: "standard",
-    type: "Bathroom Renovation",
-    name: "Sydney — Bathroom Renovation",
-    img: "/projects/sydney-bathroom-renovation-2.png",
-  },
-  {
-    size: "standard",
-    type: "Complete Home Remodelling",
-    name: "Sydney — Complete Home Remodelling",
-    img: "/projects/sydney-complete-home-remodelling.png",
-  },
-  {
-    size: "standard",
-    type: "Landscaping & Outdoor Carpentry",
-    name: "Sydney — Landscaping and Outdoor Carpentry",
-    img: "/projects/sydney-landscaping-outdoor-carpentry.png",
-  },
-  {
-    size: "standard",
-    type: "Kitchen & Living",
-    name: "bnc2",
-    img: "/projects/bnc2.png",
-  },
-  {
-    size: "standard",
-    type: "Entry & Interior",
-    name: "bnc3",
-    img: "/projects/bnc3.png",
   },
 ];
 

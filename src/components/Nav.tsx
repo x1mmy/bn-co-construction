@@ -6,8 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
   { label: "About", href: "/#about" },
-  { label: "Services", href: "/#services" },
-  { label: "Projects", href: "/#projects" },
+  { label: "Services", href: "/services" },
+  { label: "Portfolio", href: "/projects" },
 ];
 
 export default function Nav() {
@@ -65,8 +65,8 @@ export default function Nav() {
               {l.label}
             </a>
           ))}
-          <a
-            href="/#quote"
+          <Link
+            href="/contact"
             className="px-5 py-2 text-[11px] uppercase tracking-[0.12em] font-medium transition-all duration-200 active:scale-[0.97] hover:bg-[var(--gold-light)]"
             style={{
               backgroundColor: "var(--gold)",
@@ -75,7 +75,7 @@ export default function Nav() {
             }}
           >
             Get a Free Quote
-          </a>
+          </Link>
         </nav>
 
         <button
@@ -137,8 +137,8 @@ export default function Nav() {
                   {l.label}
                 </a>
               ))}
-              <a
-                href="/#quote"
+              <Link
+                href="/contact"
                 onClick={() => setMenuOpen(false)}
                 className="w-full py-3.5 text-center text-xs uppercase tracking-[0.12em] font-medium active:scale-[0.98]"
                 style={{
@@ -148,7 +148,7 @@ export default function Nav() {
                 }}
               >
                 Get a Free Quote
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

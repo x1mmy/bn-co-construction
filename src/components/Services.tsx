@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -151,6 +152,20 @@ export default function Services() {
           {services.map((s, i) => (
             <ServiceCard key={s.num} service={s} index={i} />
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Link
+            href="/services"
+            className="w-full sm:w-auto px-8 py-3 text-center text-xs uppercase tracking-[0.12em] transition-all active:scale-[0.97] hover:border-[var(--gold)] hover:text-[var(--gold)]"
+            style={{
+              border: "0.5px solid var(--border)",
+              color: "var(--text-muted)",
+              fontFamily: "var(--font-dm-sans)",
+            }}
+          >
+            View All Services
+          </Link>
         </div>
       </div>
     </section>

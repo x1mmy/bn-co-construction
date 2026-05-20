@@ -9,6 +9,7 @@
   --text-primary: #F0ECE4;
   --text-muted: #9A9389;
   --border: rgba(196, 168, 122, 0.18);
+  --accent-taupe: #7a6e5d;
 }
 
 @theme inline {
@@ -62,6 +63,28 @@ select option {
   color: var(--text-primary);
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .process-step:hover {
+    background-color: var(--bg-elevated) !important;
+  }
+
+  .process-step:hover .process-step-accent {
+    transform: scaleX(1);
+  }
+
+  .process-step:hover .process-step-num {
+    opacity: 0.22;
+  }
+
+  .process-step:hover .process-step-title {
+    color: var(--gold-light);
+  }
+}
+
+.process-step:active {
+  transform: scale(0.99);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -73,5 +96,9 @@ select option {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .process-step:active {
+    transform: none;
   }
 }

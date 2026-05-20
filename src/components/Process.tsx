@@ -25,6 +25,72 @@ const steps = [
   },
 ];
 
+function ProcessStep({
+  step,
+  index,
+}: {
+  step: (typeof steps)[0];
+  index: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.08,
+        ease: [0.23, 1, 0.32, 1],
+      }}
+      className="process-step group relative p-6 sm:p-8 cursor-default transition-[transform,background-color] duration-300"
+      style={{ backgroundColor: "var(--bg-surface)" }}
+    >
+      {/* Hover accent line */}
+      <span
+        className="process-step-accent absolute top-0 left-0 right-0 h-px origin-left scale-x-0 transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)]"
+        style={{ backgroundColor: "var(--gold)" }}
+        aria-hidden
+      />
+
+      <motion.span
+        className="process-step-num block mb-4 sm:mb-6 text-5xl sm:text-7xl transition-opacity duration-300"
+        style={{
+          fontFamily: "var(--font-cormorant)",
+          color: "var(--gold)",
+          opacity: 0.1,
+          lineHeight: 1,
+        }}
+      >
+        {step.num}
+      </motion.span>
+
+      <p
+        className="process-step-title mb-3 transition-colors duration-300"
+        style={{
+          fontFamily: "var(--font-dm-sans)",
+          fontSize: "15px",
+          fontWeight: 500,
+          color: "var(--text-primary)",
+        }}
+      >
+        {step.title}
+      </p>
+      <p
+        className="transition-colors duration-300"
+        style={{
+          fontFamily: "var(--font-dm-sans)",
+          fontSize: "13px",
+          fontWeight: 300,
+          color: "var(--text-muted)",
+          lineHeight: 1.7,
+        }}
+      >
+        {step.body}
+      </p>
+    </motion.div>
+  );
+}
+
 export default function Process() {
   return (
     <section
@@ -70,53 +136,7 @@ export default function Process() {
           }}
         >
           {steps.map((step, i) => (
-            <motion.div
-              key={step.num}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                delay: i * 0.08,
-                ease: [0.23, 1, 0.32, 1],
-              }}
-              className="p-6 sm:p-8"
-              style={{ backgroundColor: "var(--bg-surface)" }}
-            >
-              <span
-                className="block mb-4 sm:mb-6 text-5xl sm:text-7xl"
-                style={{
-                  fontFamily: "var(--font-cormorant)",
-                  color: "var(--gold)",
-                  opacity: 0.1,
-                  lineHeight: 1,
-                }}
-              >
-                {step.num}
-              </span>
-              <p
-                className="mb-3"
-                style={{
-                  fontFamily: "var(--font-dm-sans)",
-                  fontSize: "15px",
-                  fontWeight: 500,
-                  color: "var(--text-primary)",
-                }}
-              >
-                {step.title}
-              </p>
-              <p
-                style={{
-                  fontFamily: "var(--font-dm-sans)",
-                  fontSize: "13px",
-                  fontWeight: 300,
-                  color: "var(--text-muted)",
-                  lineHeight: 1.7,
-                }}
-              >
-                {step.body}
-              </p>
-            </motion.div>
+            <ProcessStep key={step.num} step={step} index={i} />
           ))}
         </div>
       </div>

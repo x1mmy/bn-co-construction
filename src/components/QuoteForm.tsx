@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import { submitForm, type FormPayload } from "@/lib/submitForm";
@@ -62,7 +62,25 @@ const projectTypes = [
   "Not sure yet",
 ];
 
-export default function QuoteForm() {
+type QuoteFormProps = {
+  sectionId?: string;
+  pitchTag?: string;
+  pitchHeading?: ReactNode;
+  showTopBorder?: boolean;
+};
+
+export default function QuoteForm({
+  sectionId = "quote",
+  pitchTag = "Free Quote",
+  pitchHeading = (
+    <>
+      Let&apos;s build something
+      <br />
+      great together
+    </>
+  ),
+  showTopBorder = true,
+}: QuoteFormProps) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const {
     register,
@@ -86,11 +104,11 @@ export default function QuoteForm() {
 
   return (
     <section
-      id="quote"
+      id={sectionId}
       className="py-24 md:py-32"
       style={{
         backgroundColor: "var(--bg-surface)",
-        borderTop: `0.5px solid var(--border)`,
+        borderTop: showTopBorder ? `0.5px solid var(--border)` : undefined,
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
@@ -111,7 +129,7 @@ export default function QuoteForm() {
                 color: "var(--gold)",
               }}
             >
-              Free Quote
+              {pitchTag}
             </p>
             <h2
               className="mb-6 leading-tight"
@@ -122,9 +140,7 @@ export default function QuoteForm() {
                 color: "var(--text-primary)",
               }}
             >
-              Let&apos;s build something
-              <br />
-              great together
+              {pitchHeading}
             </h2>
             <p
               className="mb-10"
