@@ -54,7 +54,7 @@ export default function Footer() {
               href="https://www.instagram.com/bn_co_construction/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 text-[13px] font-light transition-colors hover:text-[var(--gold)]"
+              className="footer-link inline-flex items-center gap-3 text-[13px] font-light"
               style={{
                 color: "var(--text-muted)",
                 fontFamily: "var(--font-dm-sans)",
@@ -103,7 +103,7 @@ export default function Footer() {
                 <Link
                   key={l.href}
                   href={l.href}
-                  className="text-[13px] font-light transition-colors duration-200 hover:text-[var(--text-primary)]"
+                  className="footer-link text-[13px] font-light"
                   style={{
                     color: "var(--text-muted)",
                     fontFamily: "var(--font-dm-sans)",
@@ -130,7 +130,7 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <a
                 href="tel:0478404553"
-                className="flex items-center gap-3 text-[13px] font-light transition-colors hover:text-[var(--text-primary)]"
+                className="footer-link flex items-center gap-3 text-[13px] font-light"
                 style={{
                   color: "var(--text-muted)",
                   fontFamily: "var(--font-dm-sans)",
@@ -154,7 +154,7 @@ export default function Footer() {
               </a>
               <a
                 href="mailto:blake@bnandco.com"
-                className="flex items-center gap-3 text-[13px] font-light transition-colors hover:text-[var(--text-primary)]"
+                className="footer-link flex items-center gap-3 text-[13px] font-light"
                 style={{
                   color: "var(--text-muted)",
                   fontFamily: "var(--font-dm-sans)",

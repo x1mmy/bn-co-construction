@@ -6,6 +6,7 @@ import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
+import CallBlakeCta from "@/components/CallBlakeCta";
 import QuoteForm from "@/components/QuoteForm";
 import Footer from "@/components/Footer";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Projects />
         <Process />
         <Testimonials />
+        <CallBlakeCta />
         <QuoteForm />
       </main>
       <Footer />

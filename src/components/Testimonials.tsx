@@ -1,32 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import {
-  motion,
-  useAnimationControls,
-  useReducedMotion,
-} from "framer-motion";
-
-const testimonials = [
-  {
-    quote:
-      "BN & Co turned our outdated home into something we're genuinely proud of. Their professionalism and attention to detail exceeded everything we expected.",
-    author: "The Parks Family",
-    context: "Complete Home Renovation — Roseville",
-  },
-  {
-    quote:
-      "We couldn't believe how quickly they transformed our bathroom. The process was seamless, and they kept us in the loop at every single stage. Outstanding work.",
-    author: "Alex M.",
-    context: "Bathroom Remodel — North Shore",
-  },
-  {
-    quote:
-      "The team did an incredible job on our extension. They seamlessly blended the new spaces with our existing home. The carpentry is impeccable — we'd use them again without question.",
-    author: "Chris S.",
-    context: "Home Extension — Lane Cove",
-  },
-];
+import { useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { testimonials } from "@/lib/testimonials";
 
 function TestimonialCard({
   quote,
@@ -35,7 +11,7 @@ function TestimonialCard({
 }: (typeof testimonials)[0]) {
   return (
     <article
-      className="flex-shrink-0 w-[min(100%,320px)] sm:w-[360px] md:w-[380px] p-8 flex flex-col min-h-[280px]"
+      className="testimonial-card flex-shrink-0 w-[min(100%,300px)] sm:w-[340px] md:w-[360px] p-8 flex flex-col min-h-[280px]"
       style={{
         backgroundColor: "var(--bg-surface)",
         border: "0.5px solid var(--border)",
@@ -92,30 +68,11 @@ function TestimonialCard({
 
 function TestimonialsCarousel() {
   const [paused, setPaused] = useState(false);
-  const controls = useAnimationControls();
   const loop = [...testimonials, ...testimonials];
-
-  useEffect(() => {
-    if (paused) {
-      controls.stop();
-      return;
-    }
-    controls.start({
-      x: ["0%", "-50%"],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 38,
-          ease: "linear",
-        },
-      },
-    });
-  }, [paused, controls]);
 
   return (
     <div
-      className="relative overflow-hidden"
+      className={`testimonial-marquee ${paused ? "is-paused" : ""}`}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
@@ -124,10 +81,10 @@ function TestimonialsCarousel() {
           setPaused(false);
         }
       }}
+      aria-label="Client testimonials carousel"
     >
-      {/* Edge fade */}
       <div
-        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 sm:w-24"
+        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 sm:w-28"
         style={{
           background:
             "linear-gradient(to right, var(--bg-primary) 0%, transparent 100%)",
@@ -135,7 +92,7 @@ function TestimonialsCarousel() {
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 sm:w-24"
+        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 sm:w-28"
         style={{
           background:
             "linear-gradient(to left, var(--bg-primary) 0%, transparent 100%)",
@@ -143,22 +100,16 @@ function TestimonialsCarousel() {
         aria-hidden
       />
 
-      <motion.div
-        className="flex gap-6 w-max px-4 sm:px-6"
-        animate={controls}
-        initial={{ x: "0%" }}
-        aria-live="off"
-        aria-label="Client testimonials carousel"
-      >
+      <div className="testimonial-marquee-track flex gap-6 pl-4 sm:pl-6">
         {loop.map((t, i) => (
           <TestimonialCard
-            key={`${t.author}-${i}`}
+            key={`${t.author}-${t.context}-${i}`}
             quote={t.quote}
             author={t.author}
             context={t.context}
           />
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }
@@ -167,7 +118,7 @@ export default function Testimonials() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="py-20 md:py-32 overflow-hidden">
+    <section className="relative py-20 md:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 mb-12 md:mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -201,8 +152,8 @@ export default function Testimonials() {
 
       {prefersReducedMotion ? (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {testimonials.slice(0, 6).map((t) => (
               <TestimonialCard key={t.author} {...t} />
             ))}
           </div>

@@ -85,7 +85,7 @@ export default function Hero() {
           >
             <a
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-medium text-center transition-all duration-200 active:scale-[0.98]"
+              className="nav-cta w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-medium text-center"
               style={{
                 backgroundColor: "var(--gold)",
                 color: "var(--bg-primary)",
@@ -97,7 +97,7 @@ export default function Hero() {
             </a>
             <a
               href="#projects"
-              className="w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-medium text-center transition-all duration-200 active:scale-[0.98]"
+              className="w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-medium text-center transition-[color,border-color,transform] duration-300 active:scale-[0.98] hover:border-[var(--gold-light)] hover:text-[var(--gold-light)]"
               style={{
                 border: "0.5px solid rgba(240,236,228,0.35)",
                 color: "var(--text-primary)",
@@ -106,6 +106,18 @@ export default function Hero() {
               }}
             >
               View Our Work
+            </a>
+            <a
+              href="tel:0478404553"
+              className="w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-medium text-center transition-[color,border-color,transform] duration-300 active:scale-[0.98] hover:border-[var(--gold)] hover:text-[var(--gold-light)]"
+              style={{
+                border: "0.5px solid var(--gold)",
+                color: "var(--gold)",
+                fontFamily: "var(--font-dm-sans)",
+                letterSpacing: "0.12em",
+              }}
+            >
+              Call Blake · 0478 404 553
             </a>
           </motion.div>
         </div>

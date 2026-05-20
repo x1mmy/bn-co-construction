@@ -73,17 +73,14 @@ export default function AdditionalProjects() {
               />
               {item.label && (
                 <div
-                  className="absolute inset-x-0 bottom-0 p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{
-                    background:
-                      "linear-gradient(to top, rgba(20,19,16,0.9) 0%, transparent 100%)",
-                  }}
+                  className="project-label-scrim absolute inset-x-0 bottom-0 px-3 pb-3 pt-10 sm:px-4 sm:pb-4 sm:pt-12"
+                  aria-hidden
                 >
                   <p
-                    className="text-[11px] uppercase tracking-[0.1em]"
+                    className="project-label-text text-[11px] sm:text-xs uppercase tracking-[0.12em] font-medium leading-snug"
                     style={{
                       fontFamily: "var(--font-dm-sans)",
-                      color: "var(--gold)",
+                      color: "var(--text-primary)",
                     }}
                   >
                     {item.label}

@@ -10,13 +10,14 @@ export interface FormPayload {
 }
 
 export async function submitForm(data: FormPayload): Promise<void> {
-  const webhookUrl = process.env.NEXT_PUBLIC_FORM_WEBHOOK;
-  if (!webhookUrl) throw new Error("Webhook URL not configured");
-
-  await fetch(webhookUrl, {
+  const res = await fetch("/api/quote", {
     method: "POST",
-    mode: "no-cors",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
+
+  if (!res.ok) {
+    const body = (await res.json().catch(() => null)) as { error?: string } | null;
+    throw new Error(body?.error || "Submission failed");
+  }
 }

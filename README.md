@@ -14,7 +14,7 @@ Dark-luxury construction landing page for BN & Co Construction — built to capt
 ```bash
 npm install
 cp .env.example .env.local
-# Set NEXT_PUBLIC_FORM_WEBHOOK to your n8n webhook URL
+# Set GOOGLE_SHEETS_WEBHOOK_URL — see docs/google-sheets-form-setup.md
 npm run dev
 ```
 
@@ -27,7 +27,9 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Deployment
 
-Deploy to Vercel. Add `NEXT_PUBLIC_FORM_WEBHOOK` in project environment variables.
+Deploy to Vercel. Add `GOOGLE_SHEETS_WEBHOOK_URL` in project environment variables (Google Apps Script web app URL).
+
+Form submissions flow: **Browser → `/api/quote` → Google Apps Script → Google Sheet**.
 
 ## Contact
 

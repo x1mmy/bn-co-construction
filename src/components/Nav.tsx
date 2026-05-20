@@ -41,7 +41,7 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 flex items-center justify-between h-14 sm:h-16">
         <Link
           href="/"
-          className="text-lg sm:text-xl font-light tracking-wide"
+          className="nav-logo text-lg sm:text-xl font-light tracking-wide"
           style={{
             color: "var(--text-primary)",
             fontFamily: "var(--font-cormorant)",
@@ -56,7 +56,7 @@ export default function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className="text-[11px] font-light uppercase tracking-[0.12em] transition-colors duration-200 hover:text-[var(--text-primary)]"
+              className="nav-link text-[11px] font-light uppercase tracking-[0.12em]"
               style={{
                 color: "var(--text-muted)",
                 fontFamily: "var(--font-dm-sans)",
@@ -67,7 +67,7 @@ export default function Nav() {
           ))}
           <Link
             href="/contact"
-            className="px-5 py-2 text-[11px] uppercase tracking-[0.12em] font-medium transition-all duration-200 active:scale-[0.97] hover:bg-[var(--gold-light)]"
+            className="nav-cta px-5 py-2 text-[11px] uppercase tracking-[0.12em] font-medium"
             style={{
               backgroundColor: "var(--gold)",
               color: "var(--bg-primary)",
@@ -128,7 +128,7 @@ export default function Nav() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-xs uppercase tracking-[0.12em] py-1"
+                  className="nav-link text-xs uppercase tracking-[0.12em] py-1"
                   style={{
                     color: "var(--text-muted)",
                     fontFamily: "var(--font-dm-sans)",
@@ -140,7 +140,7 @@ export default function Nav() {
               <Link
                 href="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="w-full py-3.5 text-center text-xs uppercase tracking-[0.12em] font-medium active:scale-[0.98]"
+                className="nav-cta w-full py-3.5 text-center text-xs uppercase tracking-[0.12em] font-medium"
                 style={{
                   backgroundColor: "var(--gold)",
                   color: "var(--bg-primary)",
