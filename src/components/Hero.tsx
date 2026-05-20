@@ -17,7 +17,10 @@ export default function Hero() {
         />
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: "rgba(0,0,0,0.55)" }}
+          style={{
+            background:
+              "linear-gradient(105deg, rgba(14,13,11,0.88) 0%, rgba(14,13,11,0.72) 42%, rgba(14,13,11,0.45) 70%, rgba(14,13,11,0.35) 100%)",
+          }}
         />
       </div>
 
@@ -62,11 +65,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.23, 1, 0.32, 1] }}
-            className="mb-8"
+            className="mb-8 hero-subtext"
             style={{
               fontFamily: "var(--font-dm-sans)",
               fontSize: "16px",
-              color: "var(--text-muted)",
+              color: "var(--text-hero-body)",
               fontWeight: 300,
               lineHeight: 1.7,
               maxWidth: "520px",
@@ -81,7 +84,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45, ease: [0.23, 1, 0.32, 1] }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4"
+            className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4"
           >
             <a
               href="/contact"
@@ -96,28 +99,16 @@ export default function Hero() {
               Request a Free Quote
             </a>
             <a
-              href="#projects"
+              href="tel:0478404553"
               className="w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-medium text-center transition-[color,border-color,transform] duration-300 active:scale-[0.98] hover:border-[var(--gold-light)] hover:text-[var(--gold-light)]"
               style={{
-                border: "0.5px solid rgba(240,236,228,0.35)",
+                border: "0.5px solid rgba(240,236,228,0.4)",
                 color: "var(--text-primary)",
                 fontFamily: "var(--font-dm-sans)",
                 letterSpacing: "0.12em",
               }}
             >
-              View Our Work
-            </a>
-            <a
-              href="tel:0478404553"
-              className="w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-medium text-center transition-[color,border-color,transform] duration-300 active:scale-[0.98] hover:border-[var(--gold)] hover:text-[var(--gold-light)]"
-              style={{
-                border: "0.5px solid var(--gold)",
-                color: "var(--gold)",
-                fontFamily: "var(--font-dm-sans)",
-                letterSpacing: "0.12em",
-              }}
-            >
-              Call Blake · 0478 404 553
+              Call 0478 404 553
             </a>
           </motion.div>
         </div>
