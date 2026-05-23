@@ -30,26 +30,26 @@ export default function Projects() {
           <h2
             className="mb-4"
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2rem, 4vw, 3rem)",
-              fontWeight: 400,
+              fontWeight: 600,
               color: "var(--text-primary)",
             }}
           >
-            Our Projects
+            Recent builds across Sydney
           </h2>
           <p
             style={{
               fontFamily: "var(--font-dm-sans)",
               fontSize: "15px",
-              fontWeight: 300,
+              fontWeight: 400,
               color: "var(--text-muted)",
               maxWidth: "520px",
               lineHeight: 1.7,
             }}
           >
-            Every project tells a story. Here are some of the homes we&apos;ve
-            built, transformed, and brought to life.
+            New builds, renovations, and extensions — licensed, insured, and
+            finished to a standard you can walk through with confidence.
           </p>
         </motion.div>
 

@@ -9,8 +9,9 @@
   --text-primary: #F0ECE4;
   --text-muted: #9A9389;
   --text-hero-body: #7A7368;
-  --border: rgba(196, 168, 122, 0.18);
+  --border: rgba(196, 168, 122, 0.28);
   --accent-taupe: #7a6e5d;
+  --badge-border: rgba(240, 236, 228, 0.22);
 }
 
 @theme inline {
@@ -40,7 +41,26 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-cormorant), serif;
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.bg-surface-textured {
+  background-color: var(--bg-surface);
+  background-image: repeating-linear-gradient(
+    -12deg,
+    transparent,
+    transparent 48px,
+    rgba(196, 168, 122, 0.03) 48px,
+    rgba(196, 168, 122, 0.03) 49px
+  );
 }
 
 .border-gold {

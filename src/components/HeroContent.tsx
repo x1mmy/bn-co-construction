@@ -10,35 +10,39 @@ export default function HeroContent() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0 }}
-          className="inline-flex items-center px-3 py-1.5 mb-5 sm:mb-6"
+          className="inline-flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 px-3 py-2 mb-5 sm:mb-6"
           style={{
-            border: "0.5px solid var(--gold)",
-            color: "var(--gold)",
+            border: "0.5px solid var(--badge-border)",
+            color: "var(--text-muted)",
             fontFamily: "var(--font-dm-sans)",
             fontSize: "11px",
             letterSpacing: "0.12em",
             textTransform: "uppercase",
           }}
         >
-          Licensed Builder · Sydney, NSW
+          <span>Licensed Builder · Sydney, NSW</span>
+          <span className="hidden sm:inline" aria-hidden>
+            ·
+          </span>
+          <span style={{ color: "var(--gold)" }}>NSW Carpentry Licence</span>
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.23, 1, 0.32, 1] }}
-          className="font-light leading-none mb-5 sm:mb-6"
+          className="leading-[0.95] mb-5 sm:mb-6 uppercase"
           style={{
-            fontFamily: "var(--font-cormorant)",
-            fontSize: "clamp(2.5rem, 8vw, 6rem)",
+            fontFamily: "var(--font-display)",
+            fontSize: "clamp(2.5rem, 8vw, 5.5rem)",
             color: "var(--text-primary)",
-            fontWeight: 300,
+            fontWeight: 700,
+            letterSpacing: "-0.02em",
           }}
         >
-          Crafted to{" "}
-          <em style={{ color: "var(--gold)", fontStyle: "italic" }}>last.</em>
+          Built right.
           <br />
-          Built to inspire.
+          <span style={{ color: "var(--gold)" }}>Built to last.</span>
         </motion.h1>
 
         <motion.p
@@ -50,14 +54,13 @@ export default function HeroContent() {
             fontFamily: "var(--font-dm-sans)",
             fontSize: "16px",
             color: "var(--text-hero-body)",
-            fontWeight: 300,
+            fontWeight: 400,
             lineHeight: 1.7,
             maxWidth: "520px",
           }}
         >
-          Sydney&apos;s trusted residential builder. New builds, renovations,
-          extensions, and custom carpentry. Over a decade of hands-on
-          craftsmanship.
+          Sydney builds, renovations, extensions, and custom carpentry — delivered
+          on site by a licensed team with over a decade of hands-on experience.
         </motion.p>
 
         <motion.div
@@ -68,7 +71,7 @@ export default function HeroContent() {
         >
           <a
             href="/contact"
-            className="nav-cta w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-medium text-center"
+            className="nav-cta w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-semibold text-center"
             style={{
               backgroundColor: "var(--gold)",
               color: "var(--bg-primary)",
@@ -80,7 +83,7 @@ export default function HeroContent() {
           </a>
           <a
             href="tel:0478404553"
-            className="w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-medium text-center transition-[color,border-color,transform] duration-300 active:scale-[0.98] hover:border-[var(--gold-light)] hover:text-[var(--gold-light)]"
+            className="w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-semibold text-center transition-[color,border-color,transform] duration-300 active:scale-[0.98] hover:border-[var(--gold-light)] hover:text-[var(--gold-light)]"
             style={{
               border: "0.5px solid rgba(240,236,228,0.4)",
               color: "var(--text-primary)",

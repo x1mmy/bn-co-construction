@@ -5,7 +5,11 @@ export type Project = {
   img: string;
 };
 
-/** Homepage projects preview — links to full portfolio */
+/**
+ * Homepage projects preview — links to /projects.
+ * Prefer on-site / exterior / structural images when swapping Blake's photos.
+ * See public/projects/README.md for hero and gallery priorities.
+ */
 export const featuredProjects: Project[] = [
   {
     size: "large",

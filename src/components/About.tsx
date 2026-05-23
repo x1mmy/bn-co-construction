@@ -85,15 +85,15 @@ export default function About() {
             <h2
               className="mb-6 leading-tight"
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2rem, 4vw, 3rem)",
-                fontWeight: 400,
+                fontWeight: 600,
                 color: "var(--text-primary)",
               }}
             >
-              Built on craftsmanship,
+              On-site builders,
               <br />
-              delivered with care
+              not just designers
             </h2>
 
             <p

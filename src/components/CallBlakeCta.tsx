@@ -38,9 +38,9 @@ export default function CallBlakeCta() {
             <h2
               className="mb-4 leading-tight"
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2rem, 4vw, 2.75rem)",
-                fontWeight: 400,
+                fontWeight: 600,
                 color: "var(--text-primary)",
               }}
             >

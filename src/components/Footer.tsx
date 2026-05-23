@@ -16,9 +16,9 @@ export default function Footer() {
             <p
               className="mb-4"
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "1.25rem",
-                fontWeight: 400,
+                fontWeight: 600,
                 color: "var(--text-primary)",
               }}
             >
@@ -35,9 +35,9 @@ export default function Footer() {
                 lineHeight: 1.8,
               }}
             >
-              Crafted to last. Built to inspire.
+              Built right. Built to last.
               <br />
-              Proudly serving Sydney since 2014.
+              Licensed Sydney builder — proudly serving the city since 2014.
             </p>
             <p
               className="uppercase mb-4"
@@ -96,7 +96,7 @@ export default function Footer() {
               {[
                 { label: "About", href: "/#about" },
                 { label: "Services", href: "/services" },
-                { label: "Portfolio", href: "/projects" },
+                { label: "Our Work", href: "/projects" },
                 { label: "Contact", href: "/contact" },
               ].map((l) => (
                 <Link

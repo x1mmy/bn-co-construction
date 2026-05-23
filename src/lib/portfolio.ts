@@ -15,10 +15,9 @@ export const rosevilleResidence: FeaturedProject = {
   id: "roseville",
   title: "The Roseville Residence",
   paragraphs: [
-    "Crafted with precision and expertise by BN & Co Construction, the Roseville Residence is a testament to superior craftsmanship and thoughtful design. This stunning new build seamlessly blends modern elegance with functionality, featuring striking interiors curated with meticulous attention to detail.",
-    "A capacious open-plan living zone effortlessly connects to a sun-drenched north-facing garden, while a louvred terrace and pool create a private entertainer's oasis. Luxurious finishes define the home, from the Turkish limestone kitchen with an induction cooktop and butler's pantry to the deluxe primary suite and gorgeous heated-floor bathrooms.",
-    "Built to the highest standards, the residence boasts recycled double brick and solid concrete slab construction, complemented by double glazing, zoned air conditioning, and a solar system for energy efficiency. Premium touches, including copper exterior lighting, an integrated BBQ and bar fridge, and an automated double garage, elevate the home's sophistication.",
-    "BN & Co Construction has meticulously brought this vision to life, delivering an exceptional home that balances aesthetic beauty with lasting quality.",
+    "Full new build in Roseville — double brick and concrete slab construction, structural framing through to lock-up and complete interior fit-out by BN & Co Construction.",
+    "Scope included open-plan living opening to a north-facing garden, louvred terrace and pool area, kitchen with butler's pantry, primary suite, and heated-floor bathrooms — all delivered under one licensed build team.",
+    "Built with double glazing, zoned air conditioning, solar, and premium exterior detailing including copper lighting and automated garage — completed to NSW residential standards with clear milestones from slab to handover.",
   ],
   gallery: Array.from(
     { length: 15 },
@@ -43,8 +42,8 @@ export const kincumberResidence: FeaturedProject = {
 export const additionalProjectsIntro = {
   title: "Additional Projects",
   paragraphs: [
-    "Our team brings extensive expertise across a range of projects, having completed numerous ventures in complete home remodeling and renovations, home extensions, and custom indoor carpentry.",
-    "With a specialty in kitchen and bathroom remodeling, as well as custom cabinetry and joinery, we focus on creating spaces that are both functional and stylish. Our capabilities also extend outdoors, offering beautifully crafted decking, pergolas, and landscaping structures, along with reliable general maintenance, repairs, and woodwork restoration to keep homes looking their best.",
+    "Beyond featured new builds, we complete home renovations, extensions, kitchen and bathroom fit-outs, custom joinery, decking, pergolas, and ongoing maintenance across Sydney.",
+    "Every job is run on site by licensed trades — clear quotes, regular updates, and workmanship you can inspect at each stage before handover.",
   ],
 };
 

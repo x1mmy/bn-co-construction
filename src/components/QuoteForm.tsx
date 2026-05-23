@@ -134,9 +134,9 @@ export default function QuoteForm({
             <h2
               className="mb-6 leading-tight"
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2rem, 4vw, 3rem)",
-                fontWeight: 400,
+                fontWeight: 600,
                 color: "var(--text-primary)",
               }}
             >
@@ -201,9 +201,9 @@ export default function QuoteForm({
               >
                 <h3
                   style={{
-                    fontFamily: "var(--font-cormorant)",
+                    fontFamily: "var(--font-display)",
                     fontSize: "2.5rem",
-                    fontWeight: 400,
+                    fontWeight: 700,
                     color: "var(--gold)",
                   }}
                 >

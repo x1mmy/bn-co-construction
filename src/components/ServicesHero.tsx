@@ -37,32 +37,31 @@ export default function ServicesHero() {
               Licensed Sydney Builder
             </p>
             <h1
-              className="mb-6 leading-[1.05]"
+              className="mb-6 leading-[0.95] uppercase"
               style={{
-                fontFamily: "var(--font-cormorant)",
-                fontSize: "clamp(2.75rem, 6vw, 5rem)",
-                fontWeight: 300,
+                fontFamily: "var(--font-display)",
+                fontSize: "clamp(2.75rem, 6vw, 4.5rem)",
+                fontWeight: 700,
                 color: "var(--text-primary)",
+                letterSpacing: "-0.02em",
               }}
             >
-              Every service your home needs,{" "}
-              <em style={{ color: "var(--gold)", fontStyle: "italic" }}>
-                one certified team.
-              </em>
+              Every trade your home needs,{" "}
+              <span style={{ color: "var(--gold)" }}>one licensed crew.</span>
             </h1>
             <p
               className="mb-10 max-w-xl"
               style={{
                 fontFamily: "var(--font-dm-sans)",
                 fontSize: "16px",
-                fontWeight: 300,
+                fontWeight: 400,
                 color: "var(--text-muted)",
                 lineHeight: 1.8,
               }}
             >
-              From ground-up new builds to bespoke joinery and outdoor
-              structures, BN & Co Construction delivers the full scope of
-              residential work under one licensed, insured operation.
+              From ground-up new builds to joinery, outdoor structures, and
+              maintenance — BN & Co Construction handles the full scope on site
+              under one licensed, insured operation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

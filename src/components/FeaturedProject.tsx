@@ -34,9 +34,9 @@ export default function FeaturedProject({
           <h2
             className="mb-8 leading-tight"
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2rem, 4vw, 3rem)",
-              fontWeight: 400,
+              fontWeight: 600,
               color: "var(--text-primary)",
             }}
           >
@@ -49,7 +49,7 @@ export default function FeaturedProject({
                 style={{
                   fontFamily: "var(--font-dm-sans)",
                   fontSize: "15px",
-                  fontWeight: 300,
+                  fontWeight: 400,
                   color: "var(--text-muted)",
                   lineHeight: 1.85,
                 }}

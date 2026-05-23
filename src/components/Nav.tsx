@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const links = [
   { label: "About", href: "/#about" },
   { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/projects" },
+  { label: "Our Work", href: "/projects" },
 ];
 
 export default function Nav() {
@@ -41,10 +41,12 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 flex items-center justify-between h-14 sm:h-16">
         <Link
           href="/"
-          className="nav-logo text-lg sm:text-xl font-light tracking-wide"
+          className="nav-logo text-base sm:text-lg font-semibold tracking-wide uppercase"
           style={{
             color: "var(--text-primary)",
-            fontFamily: "var(--font-cormorant)",
+            fontFamily: "var(--font-display)",
+            fontWeight: 600,
+            letterSpacing: "0.04em",
           }}
           onClick={() => setMenuOpen(false)}
         >

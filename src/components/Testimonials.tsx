@@ -18,22 +18,16 @@ function TestimonialCard({
       }}
     >
       <span
-        className="block mb-4 leading-none"
-        style={{
-          fontFamily: "var(--font-cormorant)",
-          fontSize: "4rem",
-          color: "var(--gold)",
-          lineHeight: 0.8,
-        }}
-      >
-        &ldquo;
-      </span>
+        className="block mb-4 w-8 h-0.5"
+        style={{ backgroundColor: "var(--gold)" }}
+        aria-hidden
+      />
       <p
         className="flex-1 mb-6"
         style={{
           fontFamily: "var(--font-dm-sans)",
           fontSize: "14px",
-          fontWeight: 300,
+          fontWeight: 500,
           color: "var(--text-primary)",
           lineHeight: 1.8,
         }}
@@ -139,9 +133,9 @@ export default function Testimonials() {
           </p>
           <h2
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2rem, 4vw, 3rem)",
-              fontWeight: 400,
+              fontWeight: 600,
               color: "var(--text-primary)",
             }}
           >

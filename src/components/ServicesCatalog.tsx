@@ -32,13 +32,13 @@ export default function ServicesCatalog() {
             <h2
               className="leading-tight"
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2.25rem, 4vw, 3.5rem)",
-                fontWeight: 400,
+                fontWeight: 600,
                 color: "var(--text-primary)",
               }}
             >
-              A complete suite of residential construction
+              Full residential construction on site
             </h2>
           </div>
           <p
@@ -46,13 +46,13 @@ export default function ServicesCatalog() {
             style={{
               fontFamily: "var(--font-dm-sans)",
               fontSize: "14px",
-              fontWeight: 300,
+              fontWeight: 400,
               color: "var(--text-muted)",
               lineHeight: 1.75,
             }}
           >
-            Seven core disciplines. One team accountable for quality from
-            first frame to final fix.
+            Seven core disciplines. One licensed crew accountable from first
+            frame to final fix.
           </p>
         </motion.div>
 
@@ -97,7 +97,7 @@ export default function ServicesCatalog() {
                         ? "(max-width: 1024px) 100vw, 42vw"
                         : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     }
-                    className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105"
+                    className="object-cover transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.02]"
                   />
                   <div
                     className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-80"
@@ -109,9 +109,9 @@ export default function ServicesCatalog() {
                   <span
                     className="absolute top-4 left-4 text-5xl md:text-6xl leading-none transition-opacity duration-300 group-hover:opacity-25"
                     style={{
-                      fontFamily: "var(--font-cormorant)",
+                      fontFamily: "var(--font-display)",
                       color: "var(--gold)",
-                      opacity: 0.15,
+                      opacity: 0.22,
                     }}
                   >
                     {service.number}
@@ -126,9 +126,9 @@ export default function ServicesCatalog() {
                   <h3
                     className="mb-3 leading-snug transition-colors duration-300 group-hover:text-[var(--gold-light)]"
                     style={{
-                      fontFamily: "var(--font-cormorant)",
+                      fontFamily: "var(--font-display)",
                       fontSize: "clamp(1.35rem, 2.5vw, 1.75rem)",
-                      fontWeight: 400,
+                      fontWeight: 600,
                       color: "var(--text-primary)",
                     }}
                   >
@@ -139,7 +139,7 @@ export default function ServicesCatalog() {
                     style={{
                       fontFamily: "var(--font-dm-sans)",
                       fontSize: "14px",
-                      fontWeight: 300,
+                      fontWeight: 400,
                       color: "var(--text-muted)",
                       lineHeight: 1.75,
                     }}

@@ -13,7 +13,7 @@ const services = [
   {
     num: "02",
     name: "Complete Home Renovations",
-    desc: "Transform your existing home from the inside out. Fresh perspective, meticulous execution, measurable results.",
+    desc: "Transform your existing home from the inside out — structural updates, finishes, and trades coordinated on site.",
   },
   {
     num: "03",
@@ -47,19 +47,19 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
       transition={{ duration: 0.5, delay: index * 0.06, ease: [0.23, 1, 0.32, 1] }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="p-8 transition-colors duration-200"
+      className="service-tile p-8 transition-colors duration-200 cursor-pointer"
       style={{
         backgroundColor: hovered ? "var(--bg-elevated)" : "transparent",
         border: `0.5px solid var(--border)`,
-        cursor: "default",
       }}
     >
       <span
         className="block mb-4"
         style={{
-          fontFamily: "var(--font-cormorant)",
+          fontFamily: "var(--font-display)",
           fontSize: "2.5rem",
-          color: "rgba(196,168,122,0.12)",
+          color: "rgba(196,168,122,0.22)",
+          fontWeight: 700,
           lineHeight: 1,
         }}
       >
@@ -70,7 +70,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
         style={{
           fontFamily: "var(--font-dm-sans)",
           fontSize: "16px",
-          fontWeight: 500,
+          fontWeight: 600,
           color: "var(--text-primary)",
         }}
       >
@@ -95,8 +95,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-24 md:py-32"
-      style={{ backgroundColor: "var(--bg-surface)" }}
+      className="py-24 md:py-32 bg-surface-textured"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
         {/* Header */}
@@ -121,9 +120,9 @@ export default function Services() {
           <h2
             className="mb-4"
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2rem, 4vw, 3rem)",
-              fontWeight: 400,
+              fontWeight: 600,
               color: "var(--text-primary)",
             }}
           >
@@ -133,14 +132,14 @@ export default function Services() {
             style={{
               fontFamily: "var(--font-dm-sans)",
               fontSize: "15px",
-              fontWeight: 300,
+              fontWeight: 400,
               color: "var(--text-muted)",
               maxWidth: "520px",
               lineHeight: 1.7,
             }}
           >
-            From concept to completion, every service is delivered with the same
-            attention to detail.
+            From slab and framing to fit-out and handover — one licensed crew on
+            your job from start to finish.
           </p>
         </motion.div>
 

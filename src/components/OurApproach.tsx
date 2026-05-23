@@ -33,25 +33,25 @@ export default function OurApproach() {
           <h2
             className="mb-5 leading-tight"
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2.25rem, 4vw, 3.5rem)",
-              fontWeight: 400,
+              fontWeight: 600,
               color: "var(--text-primary)",
             }}
           >
-            Our Approach
+            How we run your job
           </h2>
           <p
             style={{
               fontFamily: "var(--font-dm-sans)",
               fontSize: "15px",
-              fontWeight: 300,
+              fontWeight: 400,
               color: "var(--text-muted)",
               lineHeight: 1.8,
             }}
           >
-            A clear path from first conversation to handover. You always know
-            what happens next, what it costs, and who is accountable.
+            A straight path from first site visit to handover. You always know
+            what&apos;s happening on site, what it costs, and who to call.
           </p>
         </motion.div>
 
@@ -85,9 +85,9 @@ export default function OurApproach() {
               <span
                 className="approach-step-num block mb-6 text-6xl sm:text-7xl leading-none transition-opacity duration-300"
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   color: "var(--gold)",
-                  opacity: 0.1,
+                  opacity: 0.22,
                 }}
               >
                 {step.num}

@@ -55,9 +55,9 @@ function ProcessStep({
       <motion.span
         className="process-step-num block mb-4 sm:mb-6 text-5xl sm:text-7xl transition-opacity duration-300"
         style={{
-          fontFamily: "var(--font-cormorant)",
+          fontFamily: "var(--font-display)",
           color: "var(--gold)",
-          opacity: 0.1,
+          opacity: 0.22,
           lineHeight: 1,
         }}
       >
@@ -94,8 +94,7 @@ function ProcessStep({
 export default function Process() {
   return (
     <section
-      className="py-20 md:py-32"
-      style={{ backgroundColor: "var(--bg-surface)" }}
+      className="py-20 md:py-32 bg-surface-textured"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
         <motion.div
@@ -118,9 +117,9 @@ export default function Process() {
           </p>
           <h2
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2rem, 4vw, 3rem)",
-              fontWeight: 400,
+              fontWeight: 600,
               color: "var(--text-primary)",
             }}
           >

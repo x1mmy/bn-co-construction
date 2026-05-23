@@ -32,32 +32,32 @@ export default function ProjectsPage() {
                 color: "var(--gold)",
               }}
             >
-              Portfolio
+              Our Work
             </p>
             <h1
-              className="mb-5 leading-tight max-w-2xl"
+              className="mb-5 leading-tight max-w-2xl uppercase"
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2.5rem, 5vw, 4rem)",
-                fontWeight: 400,
+                fontWeight: 700,
                 color: "var(--text-primary)",
+                letterSpacing: "-0.02em",
               }}
             >
-              Our work across Sydney
+              Builds across Sydney
             </h1>
             <p
               className="max-w-xl"
               style={{
                 fontFamily: "var(--font-dm-sans)",
                 fontSize: "15px",
-                fontWeight: 300,
+                fontWeight: 400,
                 color: "var(--text-muted)",
                 lineHeight: 1.8,
               }}
             >
-              Featured residences and a selection of renovations, extensions,
-              and bespoke carpentry — each finished to the same standard we
-              bring to every home.
+              Featured new builds, granny flats, and renovations — structural work,
+              fit-out, and handover by one licensed crew from start to finish.
             </p>
           </div>
         </section>
