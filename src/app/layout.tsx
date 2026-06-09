@@ -24,57 +24,48 @@ export const viewport: Viewport = {
   themeColor: "#141310",
 };
 
+const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION;
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.name,
   title: {
     default:
       "BN & Co Construction | Sydney Residential Builder & Renovation Specialist",
     template: "%s | BN & Co Construction",
   },
   description: siteConfig.description,
-  keywords: [
-    "Sydney builder",
-    "home renovation Sydney",
-    "new build Sydney",
-    "kitchen renovation Sydney",
-    "home extension Sydney",
-    "carpentry Sydney",
-  ],
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    type: "website",
-    locale: siteConfig.locale,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    title:
-      "BN & Co Construction | Sydney Residential Builder & Renovation Specialist",
-    description: siteConfig.description,
-    images: [
-      {
-        url: "/bnc1.webp",
-        width: 1024,
-        height: 682,
-        alt: "Roseville Chase new build by BN & Co Construction",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title:
-      "BN & Co Construction | Sydney Residential Builder & Renovation Specialist",
-    description: siteConfig.description,
-    images: ["/bnc1.webp"],
+  keywords: [...siteConfig.keywords],
+  category: "construction",
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     shortcut: "/favicon.svg",
   },
+  ...(googleSiteVerification
+    ? {
+        verification: {
+          google: googleSiteVerification,
+        },
+      }
+    : {}),
 };
 
 export default function RootLayout({

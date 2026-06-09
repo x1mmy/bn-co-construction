@@ -1,24 +1,37 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import FeaturedProject from "@/components/FeaturedProject";
 import AdditionalProjects from "@/components/AdditionalProjects";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import {
   kincumberResidence,
   rosevilleResidence,
 } from "@/lib/portfolio";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Projects",
   description:
     "Featured new builds and renovations including The Roseville Residence and The Kincumber Residence, plus additional carpentry and remodelling work across Sydney.",
-  alternates: { canonical: "/projects" },
-};
+  path: "/projects",
+  ogImage: {
+    url: "/projects/roseville-chase-new-build.png",
+    width: 1200,
+    height: 800,
+    alt: "Roseville Chase new build by BN & Co Construction",
+  },
+});
 
 export default function ProjectsPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Projects", path: "/projects" },
+        ]}
+      />
       <Nav />
       <main className="pt-16">
         <section className="py-16 md:py-20">
