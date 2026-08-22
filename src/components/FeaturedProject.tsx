@@ -6,7 +6,7 @@ import type { FeaturedProject as FeaturedProjectType } from "@/lib/portfolio";
 
 type FeaturedProjectProps = {
   project: FeaturedProjectType;
-  galleryCols?: "roseville" | "kincumber";
+  galleryCols?: "roseville" | "kincumber" | "baulkham-hills";
 };
 
 export default function FeaturedProject({
@@ -16,6 +16,8 @@ export default function FeaturedProject({
   const gridClass =
     galleryCols === "kincumber"
       ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px"
+      : galleryCols === "baulkham-hills"
+      ? "grid grid-cols-2 sm:grid-cols-3 gap-px"
       : "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-px";
 
   return (
@@ -78,6 +80,8 @@ export default function FeaturedProject({
                 sizes={
                   galleryCols === "kincumber"
                     ? "(max-width: 640px) 100vw, 25vw"
+                    : galleryCols === "baulkham-hills"
+                    ? "(max-width: 640px) 50vw, 33vw"
                     : "(max-width: 640px) 50vw, 16vw"
                 }
                 className="object-cover transition-transform duration-500 hover:scale-105"

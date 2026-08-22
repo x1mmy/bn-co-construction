@@ -19,10 +19,12 @@ export const rosevilleResidence: FeaturedProject = {
     "Scope included open-plan living opening to a north-facing garden, louvred terrace and pool area, kitchen with butler's pantry, primary suite, and heated-floor bathrooms — all delivered under one licensed build team.",
     "Built with double glazing, zoned air conditioning, solar, and premium exterior detailing including copper lighting and automated garage — completed to NSW residential standards with clear milestones from slab to handover.",
   ],
-  gallery: Array.from(
-    { length: 15 },
-    (_, i) => `/projects/roseville/${String(i + 1).padStart(2, "0")}.png`
-  ),
+  gallery: [
+    "/projects/roseville/02.png",
+    "/projects/roseville/03.png",
+    "/projects/roseville/04.png",
+    "/projects/roseville/05.png",
+  ],
 };
 
 export const kincumberResidence: FeaturedProject = {
@@ -36,6 +38,23 @@ export const kincumberResidence: FeaturedProject = {
     "/projects/kincumber/02.png",
     "/projects/kincumber/03.png",
     "/projects/kincumber/04.png",
+  ],
+};
+
+export const baulkhamHillsResidence: FeaturedProject = {
+  id: "baulkham-hills",
+  title: "22 James St, Baulkham Hills",
+  paragraphs: [
+    "A covered alfresco entertaining deck and pergola build for a Baulkham Hills townhouse, extending the home's north-facing outdoor living space with a fully framed skylight roof structure.",
+    "Scope included structural steel pergola framing, four skylight roof windows for natural light, and a hardwood entertaining deck connecting directly to the home's living areas — finished with integrated lighting and ceiling fan provisions.",
+  ],
+  gallery: [
+    "/projects/baulkham-hills/01.png",
+    "/projects/baulkham-hills/02.png",
+    "/projects/baulkham-hills/03.png",
+    "/projects/baulkham-hills/04.png",
+    "/projects/baulkham-hills/05.png",
+    "/projects/baulkham-hills/06.png",
   ],
 };
 

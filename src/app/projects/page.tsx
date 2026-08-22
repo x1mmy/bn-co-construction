@@ -5,6 +5,7 @@ import FeaturedProject from "@/components/FeaturedProject";
 import AdditionalProjects from "@/components/AdditionalProjects";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import {
+  baulkhamHillsResidence,
   kincumberResidence,
   rosevilleResidence,
 } from "@/lib/portfolio";
@@ -77,6 +78,10 @@ export default function ProjectsPage() {
 
         <FeaturedProject project={rosevilleResidence} galleryCols="roseville" />
         <FeaturedProject project={kincumberResidence} galleryCols="kincumber" />
+        <FeaturedProject
+          project={baulkhamHillsResidence}
+          galleryCols="baulkham-hills"
+        />
         <AdditionalProjects />
 
         <section

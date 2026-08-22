@@ -14,11 +14,7 @@ Convert large assets to **WebP** where possible; Next.js will also serve AVIF/We
 
 ## The Roseville Residence
 
-Drop 15 images into `roseville/`:
-
-- `01.png` through `15.png`
-- **Order:** exterior and structure first (`01`–`05`), then kitchen/living, bedrooms, bathroom, pool/terrace
-- Recommended mix: exterior (day/dusk), framing or brickwork, kitchen, living, bedrooms, bathroom, pool/terrace
+Currently 4 images in `roseville/` (`02.png`–`05.png`) — real photography still pending. When new photos land, add them here and extend the `gallery` array in `src/lib/portfolio.ts` to match.
 
 ## The Kincumber Residence
 
@@ -28,6 +24,13 @@ Drop 4 images into `kincumber/`:
 - `02.png` — kitchen
 - `03.png` — living / main area
 - `04.png` — bathroom
+
+## 22 James St, Baulkham Hills
+
+6 images in `baulkham-hills/`:
+
+- `01.png` through `06.png`
+- **Order:** widest/most complete pergola + deck shots first, then interior-under-pergola angles, then the rooftop skylight structural detail shot last
 
 ## Additional projects
 
